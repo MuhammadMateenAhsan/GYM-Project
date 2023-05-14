@@ -12,6 +12,7 @@ import UpdateActivity from './components/UpdateActivity'
 import Addactivity from './components/Addactivity'
 import { ToastContainer } from 'react-toastify'
 import ErrorPage from './components/ErrorPage'
+import PrivateRouting from './components/PrivateRouting';
 
 const App = () => {
   return (
@@ -19,14 +20,16 @@ const App = () => {
     <Router>
        <Navbar/>
         <Routes>
+        <Route element={<PrivateRouting/>}>
+            <Route path='/updateactivity/:id' element={<UpdateActivity/>}/>
+            <Route path='/activities' element={<Activities/>}/>
+            <Route path='/addactivity' element={<Addactivity/>}/>
+        </Route>
+            <Route path='/blogs' element={<Blogs/>}/>
             <Route path='/' element={<Home/>}/>
             <Route path='*' element={<ErrorPage/>}/>
             <Route path='/login' element={<LoginSignup/>}/>
             <Route path='/contactus' element={<ContactUs/>}/>
-            <Route path='/blogs' element={<Blogs/>}/>
-            <Route path='/activities' element={<Activities/>}/>
-            <Route path='/updateactivity/:id' element={<UpdateActivity/>}/>
-            <Route path='/addactivity' element={<Addactivity/>}/>
         </Routes>
         <Footer/>
     </Router>
