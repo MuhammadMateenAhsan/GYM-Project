@@ -41,8 +41,9 @@ const deletedatafromapi = async(id)=>{
   return (
     <div className='bg-dark p-5 col-md-12'>
       
-        <div className='blogs-bg-img'>
-        </div> 
+      <div className='contact-bg-img'>
+     {/* <h2 className='blogs-inner-text display-3'>Blogs</h2> */}
+     </div>  
         <div className='addactivity col-md-12'>
             <Link to="/addactivity">
     <button>Add New Activity</button>

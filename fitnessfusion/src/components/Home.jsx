@@ -10,7 +10,7 @@ const Home = () => {
     <Header/>
     <div className='col-md-12 home-sec-1 row'>
         <div className='col-md-6 home-sec-img-div'>
-            <img src="https://demo.themefisher.com/gymfit/images/bg/bg-5.jpg" alt="" />
+            <img src="images/gallery/body1.jpg" alt="" />
         </div>
 
         <div className='col-md-6 home-sec-txt-div'>
